@@ -11,6 +11,10 @@
     <!-- Web Components for shared navbar and footer layout -->
     <script type="module" src="/src/components/site-navbar.js"></script>
     <script type="module" src="/src/components/site-footer.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -23,12 +27,68 @@
     <!-- Main content goes here -->
     <main class="container py-4">
       <h1 id="hikeName">Loading...</h1>
+
+      <!-- Hike image -->
       <img
         id="hikeImage"
-        class="img-fluid rounded mt-3"
+        class="img-fluid rounded mt-3 d-block mx-auto"
         src=""
         alt="Hike image"
       />
+
+      <!-- Write Review button (handled in JavaScript) -->
+      <div class="text-center mt-3">
+        <button id="writeReviewBtn" class="btn btn-primary">
+          Write Review
+        </button>
+      </div>
+
+      <div class="container">
+        <h2>Reviews:</h2>
+        <div id="details-go-here"></div>
+
+        <!-- Vertical stack container -->
+        <div id="reviewCardGroup" class="d-flex flex-column gap-3">
+          <!-- cards will be appended here -->
+        </div>
+      </div>
+
+      <template id="reviewCardTemplate">
+        <div class="card bg-secondary mx-auto review-card">
+          <div class="card-body bg-light py-2 px-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <h6 class="title mb-1">placeholder</h6>
+              <small class="time text-muted">placeholder</small>
+            </div>
+
+            <div class="star-rating small mb-2"></div>
+
+            <!-- Organized details in 2 columns -->
+            <div class="row g-1 small">
+              <div class="col-6">
+                <span class="fw-semibold">Level:</span>
+                <span class="level">placeholder</span>
+              </div>
+              <div class="col-6">
+                <span class="fw-semibold">Season:</span>
+                <span class="season">placeholder</span>
+              </div>
+              <div class="col-6">
+                <span class="fw-semibold">Scrambled:</span>
+                <span class="scrambled">placeholder</span>
+              </div>
+              <div class="col-6">
+                <span class="fw-semibold">Flooded:</span>
+                <span class="flooded">placeholder</span>
+              </div>
+            </div>
+
+            <hr class="my-2" />
+
+            <p class="description small mb-0">placeholder</p>
+          </div>
+        </div>
+      </template>
     </main>
     <!-- our own footer goes here -->
     <site-footer></site-footer>

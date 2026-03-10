@@ -9,7 +9,6 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import "/src/styles/style.css";
 
 function showName() {
   const nameElement = document.getElementById("name-goes-here"); // the <h1> element to display "Hello, {name}"
