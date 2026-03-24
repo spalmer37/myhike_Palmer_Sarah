@@ -1,1 +1,4 @@
-
+/* make cursor a pointer when hovering over material icons (e.g. bookmark icon) */
+.material-icons {
+  cursor: pointer;
+}
